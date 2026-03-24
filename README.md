@@ -25,7 +25,7 @@ This application helps users test their **finance knowledge** through a structur
 * React
 * Vite
 * JavaScript
-* CSS / (Add Tailwind or Bootstrap if used)
+* CSS - tailwindcss
 
 ---
 
