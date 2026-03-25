@@ -12,7 +12,7 @@ This application helps users test their **finance knowledge** through a structur
 
 ## 🎯 Features
 
-* 🧠 20 carefully designed finance-related MCQs
+* 🧠 20 finance MCQs — minimum 5 answers required
 * 📊 Review answers and submit the assessment
 * 🔄 Auto redirect to home after completion
 * 📱 Responsive design for mobile & desktop
@@ -60,7 +60,7 @@ npm run dev
 Open in browser:
 
 ```id="9p2w7m"
-http://localhost:5173/
+http://localhost:port/
 ```
 
 ---
