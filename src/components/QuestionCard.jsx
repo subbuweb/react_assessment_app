@@ -24,7 +24,7 @@ const QuestionCard = () => {
                                 : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50'
                             }`}
                         >
-                            <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center mr-4 transition-colors ${
+                           <div> <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center mr-4 transition-colors ${
                                 isSelected ? 'border-blue-500' : 'border-gray-300 group-hover:border-blue-300'
                             }`}>
                                 {isSelected && <div className="w-2.5 h-2.5 rounded-full bg-blue-500"></div>}
@@ -36,8 +36,8 @@ const QuestionCard = () => {
                                 checked={isSelected}
                                 onChange={() => selectAnswer(currentQuestion, option)}
                                 className="hidden"
-                            />
-                            <span className={`text-base font-medium ${isSelected ? 'text-blue-700' : 'text-gray-700 group-hover:text-gray-900'}`}>{option}</span>
+                            /></div>
+                            <div><span className={`text-base font-medium ${isSelected ? 'text-blue-700' : 'text-gray-700 group-hover:text-gray-900'}`}>{option}</span></div>
                         </label>
                     );
                 })}

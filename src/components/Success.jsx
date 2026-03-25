@@ -9,21 +9,21 @@ const Success = ({ navigateToHome }) => {
 
     useEffect(() => {
         // Trigger confetti
-        var duration = 3 * 1000;
+        var duration = 2 * 1000;
         var end = Date.now() + duration;
 
         (function frame() {
             confetti({
-                particleCount: 5,
-                angle: 60,
-                spread: 55,
+                particleCount: 3,
+                angle: 40,
+                spread: 50,
                 origin: { x: 0 },
                 colors: ['#3b82f6', '#10b981', '#f59e0b']
             });
             confetti({
-                particleCount: 5,
-                angle: 120,
-                spread: 55,
+                particleCount: 3,
+                angle: 140,
+                spread: 50,
                 origin: { x: 1 },
                 colors: ['#3b82f6', '#10b981', '#f59e0b']
             });
@@ -74,7 +74,7 @@ const Success = ({ navigateToHome }) => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-indigo-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
                 <div className="relative z-10">
                     <div className="flex items-center justify-center text-gray-700 font-semibold mb-6 text-lg">
-                        Returning to dashboard in 
+                        You’ll be redirected in 
                         <span className="ml-3 w-10 h-10 flex items-center justify-center bg-gray-900 text-white rounded-xl text-xl font-black shadow-lg transform transition-transform group-hover:scale-110">
                             {countdown}
                         </span>

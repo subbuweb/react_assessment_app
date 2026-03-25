@@ -1,16 +1,101 @@
-# React + Vite
+# 💰 Finance Knowledge Assessment App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive **20-question MCQ (Multiple Choice Questions) assessment app** built with React and Vite to evaluate users' understanding of financial concepts.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📌 Overview
 
-## React Compiler
+This application helps users test their **finance knowledge** through a structured quiz. At the end of the assessment, users receive feedback based on their performance.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🎯 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* 🧠 20 finance MCQs — minimum 5 answers required
+* 📊 Review answers and submit the assessment
+* 🔄 Auto redirect to home after completion
+* 📱 Responsive design for mobile & desktop
+* ⚡ Fast performance using Vite
+
+---
+
+## 🛠️ Tech Stack
+
+* React
+* Vite
+* JavaScript
+* CSS - tailwindcss
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```id="k3l9x1"
+git clone https://github.com/subbuweb/react_assessment_app.git
+```
+
+Navigate to the project folder:
+
+```id="n8q2zl"
+cd react_assessment_app
+```
+
+Install dependencies:
+
+```id="1f6h9v"
+npm install
+```
+
+---
+
+## ▶️ Run the App
+
+```id="x9t3kp"
+npm run dev
+```
+
+Open in browser:
+
+```id="9p2w7m"
+http://localhost:port/
+```
+
+---
+
+## 🏗️ Build for Production
+
+```id="v0l8cs"
+npm run build
+```
+
+Preview build:
+
+```id="z7q4hn"
+npm run preview
+```
+
+---
+
+## 📊 How It Works
+
+1. User starts the quiz
+2. Answers 20 MCQ questions
+3. Review your answers and submit
+4. User is redirected back to home page
+
+
+
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+Subbu
+GitHub: https://github.com/subbuweb

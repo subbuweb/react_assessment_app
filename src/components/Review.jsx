@@ -1,17 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useAssessmentContext } from '../context/AssessmentContext';
 import { questions } from '../data/questions';
-import { AlertCircle } from 'lucide-react';
+import { AlertCircle, CheckCircle } from 'lucide-react';
 
 const Review = () => {
     const { answers, goToQuestion, submitAssessment } = useAssessmentContext();
     const [showWarning, setShowWarning] = useState(false);
 
+    useEffect(() => {
+        if (showWarning) {
+            const timer = setTimeout(() => setShowWarning(false), 3000);
+            return () => clearTimeout(timer);
+        }
+    }, [showWarning]);
+
     const handleSubmit = () => {
         const isValid = submitAssessment();
         if (!isValid) {
             setShowWarning(true);
-            setTimeout(() => setShowWarning(false), 5000);
         }
     };
 
@@ -21,11 +27,21 @@ const Review = () => {
             <p className="text-gray-600 mb-8">Click on any question to go back and change your answer.</p>
 
             {showWarning && (
-                <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 animate-toast-up pointer-events-none">
-                    <div className="bg-gray-900/90 backdrop-blur-md shadow-2xl rounded-full px-6 py-3.5 border border-white/10 flex items-center justify-center">
-                        <p className="text-sm font-semibold text-white tracking-wide">
-                            Please answer 5+ questions 🚀
-                        </p>
+                <div className="fixed inset-0 flex items-end justify-center pb-8 z-50 pointer-events-none">
+                    <div className="animate-in slide-in-from-bottom-4 fade-in duration-300">
+                        <div className="bg-gradient-to-r from-amber-50 to-orange-50 backdrop-blur-sm shadow-2xl rounded-2xl px-8 py-5 border border-amber-200 flex items-center gap-4 max-w-lg">
+                            <div className="flex-shrink-0 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-100">
+                                <AlertCircle className="h-6 w-6 text-amber-600" strokeWidth={2.5} />
+                            </div>
+                            <div>
+                                <p className="font-bold text-amber-900 text-base">
+                                    Complete Your Assessment
+                                </p>
+                                <p className="text-sm font-medium text-amber-700 mt-1">
+                                    Please answer at least 5 questions before submitting
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}
